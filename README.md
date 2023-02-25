@@ -1,17 +1,46 @@
-# lognpass-delphi
-Client Delphi du générateur de codes uniques Log'N Pass pour double authentification logicielle.
+# Delphi client library for Log'n Pass
 
------
+[Cette page en français.](LISEZMOI.md)
 
-Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero (rubrique "outils gratuits").
-En entreprise vous pouvez aussi tester Delphi avec la version d'évaluation.
-https://www.embarcadero.com/products/delphi
+Log'n Pass is an OTP (one time password) generator. It generates codes from a key phrase and a random code retrieved online.
 
-Cette formation en ligne gratuite vous apprendra les bases de la programmation avec le Pascal et Delphi même si vous n'avez jamais appris à programmer :
-https://apprendre-delphi.fr/apprendre-la-programmation-avec-delphi/
+This code repository contains the official client library and an sample program to use Log'n Pass in your Delphi projects as a double authentication or time-limited password login.
 
-Des conférences en ligne et des webinaires (points techniques sur des sujets précis) sont organisés régulièrement. Consultez [le planning de ces webinaires](https://developpeur-pascal.fr/p/_6007-webinaires.html) et regardez les [rediffusions des webinaires Delphi](https://serialstreameur.fr/webinaires-delphi.php).
+The source codes in this repository are distributed under the MIT license. You can freely use them to implement Log'n Pass in your projects.
 
-Des sessions de [live coding sur Twitch](https://www.twitch.tv/patrickpremartin) ou [la chaîne YouTube Developpeur Pascal](https://www.youtube.com/channel/UCk_LmkBB90jdEdmfF77W6qQ) sont également organisées régulièrement. Pour Twitch vous pouvez consulter [le planning hebdomadaire](https://www.twitch.tv/patrickpremartin/schedule). Vous pouvez aussi vous reporter à [cet article](https://developpeur-pascal.fr/p/_600e-livestreams-de-codage-en-direct-avec-delphi.html). Pour les rediffusions de tout ça, rendez-vous simplement dans la [rubrique live coding](https://serialstreameur.fr/live-coding.php) de [Serial Streameur](https://serialstreameur.fr/) où vous trouverez de nombreuses vidéos en français à destination des développeurs de logiciels, applications mobiles, sites web et jeux vidéo.
+This project uses dependencies, check their license if you want to use them too.
 
-Enfin, si vous préférez la lecture à la vidéo, vous trouverez tous les livres récents publiés sur Delphi et le langage Pascal sur [Delphi Books](https://delphi-books.com)
+This code repository contains a project developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
+
+## Install
+
+To download this project you better should use "git" command but you also can download a ZIP from [its GitHub repository](https://github.com/DeveloppeurPascal/LogNPass-Delphi).
+
+**Warning :** if the project has submodules dependencies they wont be in the ZIP file. You'll have to download them manually.
+
+## Dependencies
+
+This project depends on :
+
+* [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) in the sub folder ./lib-externes/librairies
+
+## How to ask a new feature, report a bug or a security issue ?
+
+If you want an answer from the project owner the best way to ask for a new feature or report a bug is to go to [the GitHub repository](https://github.com/DeveloppeurPascal/LogNPass-Delphi) and [open a new issue](https://github.com/DeveloppeurPascal/LogNPass-Delphi/issues).
+
+If you found a security issue please don't report it publicly before a patch is available. Explain the case by [sending a private message to the author](https://developpeur-pascal.fr/nous-contacter.php).
+
+You also can fork the repository and contribute by submitting pull requests if you want to help. Please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+## Support the project and its author
+
+If you think this project is useful and want to support it, please make a donation to [its author](https://github.com/DeveloppeurPascal). It will help to maintain the code and binaries.
+
+You can use one of those services :
+
+* [GitHub Sponsors](https://github.com/sponsors/DeveloppeurPascal)
+* [Liberapay](https://liberapay.com/PatrickPremartin)
+* [Patreon](https://www.patreon.com/patrickpremartin)
+* [Paypal](https://www.paypal.com/paypalme/patrickpremartin)
+
+or if you speack french you can [subscribe to Zone Abo](https://zone-abo.fr/nos-abonnements.php) on a monthly or yearly basis and get a lot of resources as videos and articles.
