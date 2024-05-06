@@ -12,7 +12,12 @@ procedure lognpass_check_password(phrase_md5, password: string;
 
 implementation
 
-uses u_md5, u_ajax, system.Classes, system.JSON, system.Generics.Collections;
+uses
+  u_md5,
+  u_ajax,
+  system.Classes,
+  system.JSON,
+  system.Generics.Collections;
 
 var
   lognpass_previous_password: TDictionary<string, string>;
