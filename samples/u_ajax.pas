@@ -3,7 +3,10 @@ unit u_ajax;
 interface
 
 uses
-  Classes, SysUtils, StrUtils, IdHttp;
+  Classes,
+  SysUtils,
+  StrUtils,
+  IdHttp;
 
 type
   TAjaxCallback = reference to procedure(aResponseContent: TStringStream);
