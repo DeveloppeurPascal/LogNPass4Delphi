@@ -108,8 +108,8 @@ begin
           JSON: TJSONObject;
         begin
           Memo1.Lines.Add(aResponseContent.DataString);
+          JSON := TJSONObject.Create;
           try
-            JSON := TJSONObject.Create;
             JSON.Parse(aResponseContent.Bytes, 0);
             try
               api_key := JSON.GetValue('key').ToString.Replace('"', '');

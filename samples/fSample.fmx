@@ -21,6 +21,7 @@ object Form2: TForm2
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'Log'#39'N Pass phrase'
+    TabOrder = 0
   end
   object edtPhrase: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -42,6 +43,7 @@ object Form2: TForm2
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'MD5 encoded'
+    TabOrder = 2
   end
   object lblPhraseMD5: TLabel
     Align = Top
@@ -50,6 +52,7 @@ object Form2: TForm2
     Size.Width = 529.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
+    TabOrder = 3
   end
   object Label3: TLabel
     Align = Top
@@ -59,6 +62,7 @@ object Form2: TForm2
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'Password'
+    TabOrder = 4
   end
   object lblPassword: TLabel
     Align = Top
@@ -67,6 +71,7 @@ object Form2: TForm2
     Size.Width = 529.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
+    TabOrder = 5
   end
   object ProgressBar1: TProgressBar
     Align = Top
@@ -130,6 +135,7 @@ object Form2: TForm2
       Position.Y = 4.000000000000000000
       TabOrder = 2
       Text = 'Tester'
+      TextSettings.Trimming = None
       OnClick = btnCheckPasswordClick
     end
     object lblPasswordOkOrNot: TLabel
