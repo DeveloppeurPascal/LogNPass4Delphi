@@ -50,7 +50,6 @@ var
   password_ok: boolean;
   nb: integer;
   api_num: string;
-  ch: string;
 begin
   password_ok := false;
   if (password.Length > 0) then
@@ -70,8 +69,8 @@ begin
             JSON: tjsonobject;
             api_num2, api_key, password_old: string;
           begin
+            JSON := tjsonobject.Create;
             try
-              JSON := tjsonobject.Create;
               JSON.Parse(aResponseContent.Bytes, 0);
               try
                 api_key := JSON.GetValue('key').ToString.Replace('"', '');
