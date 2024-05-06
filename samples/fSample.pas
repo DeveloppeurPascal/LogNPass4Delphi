@@ -3,10 +3,22 @@ unit fSample;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
   System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Controls.Presentation, FMX.Edit, FMX.Layouts, FMX.Memo, FMX.ScrollBox,
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+  FMX.StdCtrls,
+  FMX.Controls.Presentation,
+  FMX.Edit,
+  FMX.Layouts,
+  FMX.Memo,
+  FMX.ScrollBox,
   FMX.Memo.Types;
 
 type
@@ -47,7 +59,10 @@ implementation
 {$R *.fmx}
 
 uses
-  u_lognpass, u_ajax, u_md5, System.JSON;
+  u_lognpass,
+  u_ajax,
+  u_md5,
+  System.JSON;
 
 procedure TForm2.btnCheckPasswordClick(Sender: TObject);
 begin
