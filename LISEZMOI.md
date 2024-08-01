@@ -1,6 +1,6 @@
 # Librairie cliente Delphi pour Log'n Pass
 
-[This page in english.](README.md)
+[This page in English.](README.md)
 
 Log'n Pass est un générateur OTP (one time password). Il génère des codes à partir d'une phrase clé et d'un code aléatoire récupéré en ligne.
 
