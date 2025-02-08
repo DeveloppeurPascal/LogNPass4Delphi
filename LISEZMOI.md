@@ -2,15 +2,11 @@
 
 [This page in English.](README.md)
 
-Log'n Pass est un générateur OTP (one time password). Il génère des codes à partir d'une phrase clé et d'un code aléatoire récupéré en ligne.
+[Log'n Pass](https://lognpass.olfsoftware.fr) est un générateur OTP (one time password). Il génère des codes à partir d'une phrase clé et d'un code aléatoire récupéré en ligne.
 
 Ce dépôt de code contient la librairie cliente officielle et un programme d'exemple pour utiliser Log'n Pass dans vos projets Delphi sous forme de double authentification ou de connexion avec un mot de passe à durée limitée.
 
 Ce dépôt de code contient un projet développé en langage Pascal Objet sous Delphi. Vous ne savez pas ce qu'est Dephi ni où le télécharger ? Vous en saurez plus [sur ce site web](https://delphi-resources.developpeur-pascal.fr/).
-
-## Utiliser ce logiciel
-
-Consultez [le site de Log'n Pass](https://lognpass.olfsoftware.fr) pour télécharger sa version compilée, en savoir plus sur son fonctionnement, accéder à des vidéos et articles, connaître les différentes versions disponibles et leurs fonctionnalités, contacter le support utilisateurs...
 
 ## Présentations et conférences
 
@@ -28,9 +24,15 @@ Ce projet utilise des dépendances sous forme de sous modules. Ils seront absent
 
 ## Documentation et assistance
 
-La documentation technique du projet, générée avec [DocInsight](https://devjetsoftware.com/products/documentation-insight/), est disponible dans le dossier ./docs et sur [GitHub Pages](https://developpeurpascal.github.io/LogNPass4Delphi). D'autres informations et des liens connexes sont disponibles sur [le site web du projet](https://lognpass4delphi.developpeur-pascal.fr).
+Je passe par des commentaires au format [XMLDOC](https://docwiki.embarcadero.com/RADStudio/fr/Commentaires_de_documentation_XML) dans Delphi pour documenter mes projets. Ils sont reconnus par Help Insight qui propose de l'aide à la saisie en temps réel dans l'éditeur de code.
 
-Si vous avez besoin d'explications ou d'aide pour utiliser ce projet dans les vôtres, n'hésitez pas à [me contacter](https://developpeur-pascal.fr/nous-contacter.php). Je pourrai soit vous orienter vers une ressource en ligne, soit vous proposer une assistance sous forme de prestation ou gratuite selon les cas. Vous pouvez aussi me faire signe à l'occasion d'une conférence ou d'une présentation en ligne.
+J'utilise régulièrement l'outil [DocInsight](https://devjetsoftware.com/products/documentation-insight/) pour les saisir et contrôler leur formatage.
+
+L'export de la documentation est fait en HTML par [DocInsight](https://devjetsoftware.com/products/documentation-insight/) ou [PasDoc](https://pasdoc.github.io) vers le dossier /docs du dépôt. Vous y avez aussi [accès en ligne](https://developpeurpascal.github.io/LogNPass4Delphi) grâce à l'hébergement offert par GitHub Pages.
+
+D'autres informations (tutoriels, articles, vidéos, FAQ, présentations et liens) sont disponibles sur [le site web du projet](https://lognpass4delphi.developpeur-pascal.fr/) ou [le devlog du projet](https://developpeur-pascal.fr/log-n-pass.html).
+
+Si vous avez besoin d'explications ou d'aide pour comprendre ou utiliser certaines parties de ce projet dans le vôtre, n'hésitez pas à [me contacter](https://developpeur-pascal.fr/nous-contacter.php). Je pourrai soit vous orienter vers une ressource en ligne, soit vous proposer une assistance sous forme de prestation payante ou gratuite selon les cas. Vous pouvez aussi me faire signe à l'occasion d'une conférence ou pendant une présentation en ligne.
 
 ## Compatibilité
 
@@ -51,7 +53,7 @@ Vous êtes libre d'utiliser le contenu de ce dépôt de code n'importe où à co
 * de diffuser les modifications apportées aux fichiers fournis dans ce projet sous licence AGPL (en y laissant les mentions de copyright d'origine (auteur, lien vers ce dépôt, licence) obligatoirement complétées par les vôtres)
 * de diffuser les codes sources de vos créations sous licence AGPL
 
-Si cette licence ne convient pas à vos besoins (notamment pour un projet commercial) je propose aussi [des licences classiques pour les développeurs et les entreprises](https://lognpass4delphi.developpeur-pascal.fr).
+Si cette licence ne convient pas à vos besoins (notamment pour un projet commercial) je propose aussi [des licences classiques pour les développeurs et les entreprises](https://lognpass4delphi.developpeur-pascal.fr/).
 
 Certains éléments inclus dans ce dépôt peuvent dépendre de droits d'utilisation de tiers (images, sons, ...). Ils ne sont pas réutilisables dans vos projets sauf mention contraire.
 

@@ -2,15 +2,11 @@
 
 [Cette page en français.](LISEZMOI.md)
 
-Log'n Pass is an OTP (one time password) generator. It generates codes from a key phrase and a random code retrieved online.
+[Log'n Pass](https://lognpass.olfsoftware.fr) is an OTP (one time password) generator. It generates codes from a key phrase and a random code retrieved online.
 
 This code repository contains the official client library and an sample program to use Log'n Pass in your Delphi projects as a double authentication or time-limited password login.
 
 This code repository contains a project developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
-
-## Using this software
-
-Visit [the Log'n Pass website](https://lognpass.olfsoftware.fr)  to download the compiled version, learn more about how it works, access videos and articles, find out about the different versions available and their features, contact user support...
 
 ## Talks and conferences
 
@@ -26,11 +22,17 @@ This project uses dependencies in the form of sub-modules. They will be absent f
 
 * [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) must be installed in the ./lib-externes/librairies subfolder.
 
-# Documentation and support
+## Documentation and support
 
-The project's technical documentation, generated with [DocInsight](https://devjetsoftware.com/products/documentation-insight/), is available in the ./docs folder and on [GitHub Pages](https://developpeurpascal.github.io/LogNPass4Delphi). Further information and related links are available on [the project website](https://lognpass4delphi.developpeur-pascal.fr).
+I use comments in [XMLDOC](https://docwiki.embarcadero.com/RADStudio/en/XML_Documentation_Comments) format in Delphi to document my projects. They are recognized by Help Insight, which offers real-time input help in the code editor.
 
-If you need explanations or help in using this project in your own, please [contact me](https://developpeur-pascal.fr/nous-contacter.php). I can either direct you to an online resource, or offer you assistance on a fee-for-service basis. You can also contact me at a conference or an online presentation.
+I regularly use the [DocInsight](https://devjetsoftware.com/products/documentation-insight/) tool to enter them and check their formatting.
+
+Documentation is exported in HTML by [DocInsight](https://devjetsoftware.com/products/documentation-insight/) or [PasDoc](https://pasdoc.github.io) to the /docs folder of the repository. You can also [access it online](https://developpeurpascal.github.io/LogNPass4Delphi) through the hosting offered by GitHub Pages.
+
+Further information (tutorials, articles, videos, FAQ, talks and links) can be found on [the project website](https://lognpass4delphi.developpeur-pascal.fr/) or [the project devlog](https://developpeur-pascal.fr/log-n-pass.html).
+
+If you need explanations or help in understanding or using parts of this project in yours, please [contact me](https://developpeur-pascal.fr/nous-contacter.php). I can either direct you to an online resource, or offer you assistance in the form of a paid or free service, depending on the case. You can also contact me at a conference or during an online presentation.
 
 ## Compatibility
 
@@ -51,7 +53,7 @@ You are free to use the contents of this code repository anywhere provided :
 * distribute the modifications made to the files provided in this AGPL-licensed project (leaving the original copyright notices (author, link to this repository, license) must be supplemented by your own)
 * to distribute the source code of your creations under the AGPL license.
 
-If this license doesn't suit your needs (especially for a commercial project) I also offer [classic licenses for developers and companies](https://lognpass4delphi.developpeur-pascal.fr).
+If this license doesn't suit your needs (especially for a commercial project) I also offer [classic licenses for developers and companies](https://lognpass4delphi.developpeur-pascal.fr/).
 
 Some elements included in this repository may depend on third-party usage rights (images, sounds, etc.). They are not reusable in your projects unless otherwise stated.
 
