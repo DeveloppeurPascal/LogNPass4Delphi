@@ -122,74 +122,6 @@
                           </UL>
                   </UL>
               <LI> <OBJECT type="text/sitemap">
-                  <param name="Name" value="u_ajax">
-                  <param name="Local" value="u_ajax.html">
-                  </OBJECT>
-                  <UL>
-                      <LI> <OBJECT type="text/sitemap">
-                          <param name="Name" value="Classes">
-                          </OBJECT>
-                          <UL>
-                              <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="TAjaxThread">
-                                  <param name="Local" value="u_ajax.TAjaxThread.html">
-                                  </OBJECT>
-                                  <UL>
-                                      <LI> <OBJECT type="text/sitemap">
-                                          <param name="Name" value="Constructors">
-                                          </OBJECT>
-                                          <UL>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="Create">
-                                                  <param name="Local" value="u_ajax.TAjaxThread.Create.html">
-                                                  </OBJECT>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="Destroy">
-                                                  <param name="Local" value="u_ajax.TAjaxThread.Destroy.html">
-                                                  </OBJECT>
-                                          </UL>
-                                      <LI> <OBJECT type="text/sitemap">
-                                          <param name="Name" value="Methods">
-                                          </OBJECT>
-                                          <UL>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="Execute">
-                                                  <param name="Local" value="u_ajax.TAjaxThread.Execute.html">
-                                                  </OBJECT>
-                                          </UL>
-                                  </UL>
-                          </UL>
-                      <LI> <OBJECT type="text/sitemap">
-                          <param name="Name" value="Delegates">
-                          </OBJECT>
-                          <UL>
-                              <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="TAjaxCallback">
-                                  <param name="Local" value="u_ajax.TAjaxCallback.html">
-                                  </OBJECT>
-                                  <UL>
-                                      <LI> <OBJECT type="text/sitemap">
-                                          <param name="Name" value="Methods">
-                                          </OBJECT>
-                                          <UL>
-                                              <LI> <OBJECT type="text/sitemap">
-                                                  <param name="Name" value="Invoke">
-                                                  <param name="Local" value="u_ajax.TAjaxCallback.Invoke.html">
-                                                  </OBJECT>
-                                          </UL>
-                                  </UL>
-                          </UL>
-                      <LI> <OBJECT type="text/sitemap">
-                          <param name="Name" value="Routines">
-                          </OBJECT>
-                          <UL>
-                              <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="AjaxCall">
-                                  <param name="Local" value="u_ajax.AjaxCall.html">
-                                  </OBJECT>
-                          </UL>
-                  </UL>
-              <LI> <OBJECT type="text/sitemap">
                   <param name="Name" value="u_lognpass">
                   <param name="Local" value="u_lognpass.html">
                   </OBJECT>
@@ -205,21 +137,6 @@
                               <LI> <OBJECT type="text/sitemap">
                                   <param name="Name" value="lognpass_get_password">
                                   <param name="Local" value="u_lognpass.lognpass_get_password.html">
-                                  </OBJECT>
-                          </UL>
-                  </UL>
-              <LI> <OBJECT type="text/sitemap">
-                  <param name="Name" value="u_md5">
-                  <param name="Local" value="u_md5.html">
-                  </OBJECT>
-                  <UL>
-                      <LI> <OBJECT type="text/sitemap">
-                          <param name="Name" value="Routines">
-                          </OBJECT>
-                          <UL>
-                              <LI> <OBJECT type="text/sitemap">
-                                  <param name="Name" value="MD5">
-                                  <param name="Local" value="u_md5.MD5.html">
                                   </OBJECT>
                           </UL>
                   </UL>
