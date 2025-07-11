@@ -29,8 +29,8 @@
   https://github.com/DeveloppeurPascal/LogNPass4Delphi
 
   ***************************************************************************
-  File last update : 2025-02-09T11:04:01.707+01:00
-  Signature : 3cd291e399b3eefda990257e3097f5e54bde7892
+  File last update : 2025-07-11T14:08:52.000+02:00
+  Signature : c2b047300f9640309ae9a1c2152d944c995ef47b
   ***************************************************************************
 *)
 
@@ -40,9 +40,7 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   fMain in 'fMain.pas' {Form2},
-  u_ajax in 'u_ajax.pas',
-  u_lognpass in '..\..\src\u_lognpass.pas',
-  u_md5 in '..\..\lib-externes\librairies\src\u_md5.pas';
+  u_lognpass in '..\..\src\u_lognpass.pas';
 
 {$R *.res}
 
