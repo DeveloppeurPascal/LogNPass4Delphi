@@ -29,8 +29,8 @@
   https://github.com/DeveloppeurPascal/LogNPass4Delphi
 
   ***************************************************************************
-  File last update : 2025-02-09T11:04:01.707+01:00
-  Signature : eca7dac447432eef5e8308952de63f46a71d78bb
+  File last update : 2025-07-11T14:08:40.000+02:00
+  Signature : 7df784f2ec66df792b379ebb823f4825cf90e747
   ***************************************************************************
 *)
 
@@ -96,8 +96,9 @@ implementation
 
 uses
   u_lognpass,
-  u_ajax,
-  u_md5,
+  System.Hash,
+  System.Net.HttpClient,
+  System.Net.URLClient,
   System.JSON;
 
 procedure TForm2.btnCheckPasswordClick(Sender: TObject);
@@ -118,7 +119,7 @@ end;
 
 procedure TForm2.edtPhraseChange(Sender: TObject);
 begin
-  phrase_MD5 := MD5(edtPhrase.Text);
+  phrase_MD5 := THashMD5.GetHashString(edtPhrase.Text);
   lblPhraseMD5.Text := phrase_MD5;
   if (api_key <> '') then
   begin
@@ -153,40 +154,47 @@ begin
     dec(temps_restant);
     ProgressBar1.Value := temps_restant;
     if (temps_restant < 1) then
-      AjaxCall('http://api.lognpass.com/get/',
-        procedure(aResponseContent: TStringStream)
+      turlstream.create('http://api.lognpass.com/get/',
+        procedure(AStream: TStream)
         var
+          SS: TStringStream;
           JSON: TJSONObject;
         begin
-          Memo1.Lines.Add(aResponseContent.DataString);
-          JSON := TJSONObject.Create;
+          SS := TStringStream.create;
           try
-            JSON.Parse(aResponseContent.Bytes, 0);
+            AStream.Position := 0;
+            SS.CopyFrom(AStream);
+            Memo1.Lines.Add(SS.DataString);
+            JSON := TJSONObject.ParseJSONValue(SS.DataString) as TJSONObject;
             try
-              api_key := JSON.GetValue('key').ToString.Replace('"', '');
-            except
-              api_key := '';
+              try
+                api_key := JSON.GetValue('key').ToString.Replace('"', '');
+              except
+                api_key := '';
+              end;
+              try
+                api_num := JSON.GetValue('num').ToString;
+              except
+                api_num := '';
+              end;
+              try
+                api_sec := JSON.GetValue('sec').ToString;
+              except
+                api_sec := '1';
+              end;
+              temps_restant := api_sec.ToInteger;
+              if (api_key.Length > 0) then
+                lblPassword.Text := lognpass_get_password(phrase_MD5,
+                  api_key, api_num)
+              else
+                lblPassword.Text := '-';
+              Memo1.Lines.Add(lblPassword.Text);
+            finally
+              JSON.Free;
+              timer_en_cours := false;
             end;
-            try
-              api_num := JSON.GetValue('num').ToString;
-            except
-              api_num := '';
-            end;
-            try
-              api_sec := JSON.GetValue('sec').ToString;
-            except
-              api_sec := '1';
-            end;
-            temps_restant := api_sec.ToInteger;
-            if (api_key.Length > 0) then
-              lblPassword.Text := lognpass_get_password(phrase_MD5,
-                api_key, api_num)
-            else
-              lblPassword.Text := '-';
-            Memo1.Lines.Add(lblPassword.Text);
           finally
-            JSON.Free;
-            timer_en_cours := false;
+            SS.Free;
           end;
         end)
     else
