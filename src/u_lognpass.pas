@@ -29,8 +29,8 @@
   https://github.com/DeveloppeurPascal/LogNPass4Delphi
 
   ***************************************************************************
-  File last update : 2025-02-09T11:04:01.707+01:00
-  Signature : 7fce9e946ef6910dfab0abcead83e9538573c4a0
+  File last update : 2025-07-11T14:08:44.000+02:00
+  Signature : 5e50baa968ebac794cd6390a2047d87a5a8e665d
   ***************************************************************************
 *)
 
@@ -49,8 +49,9 @@ procedure lognpass_check_password(phrase_md5, password: string;
 implementation
 
 uses
-  u_md5,
-  u_ajax,
+  system.Hash,
+  system.Net.HttpClient,
+  system.Net.URLClient,
   system.Classes,
   system.JSON,
   system.Generics.Collections;
@@ -64,7 +65,7 @@ var
   c: char;
   phrase_codee, pass: string;
 begin
-  phrase_codee := MD5(phrase_md5 + api_key);
+  phrase_codee := THashMD5.GetHashString(phrase_md5 + api_key);
   pass := '';
   i := 0;
   for c in phrase_codee do
@@ -104,43 +105,54 @@ begin
     begin
       api_num := password.Substring(nb + 1);
       try
-        AjaxCall('http://' + api_num + '.lognpass.net/get/',
-          procedure(aResponseContent: TStringStream)
+        turlstream.create('http://' + api_num + '.lognpass.net/get/',
+          procedure(AStream: TStream)
           var
+            SS: TStringStream;
             JSON: tjsonobject;
             api_num2, api_key, password_old: string;
           begin
-            JSON := tjsonobject.Create;
+            if not assigned(AStream) then
+              exit;
+
+            SS := TStringStream.create;
             try
-              JSON.Parse(aResponseContent.Bytes, 0);
+              AStream.Position := 0;
+              SS.CopyFrom(AStream);
+              JSON := tjsonobject.ParseJSONValue(SS.DataString) as tjsonobject;
               try
-                api_key := JSON.GetValue('key').ToString.Replace('"', '');
-              except
-                api_key := '';
-              end;
-              try
-                api_num2 := JSON.GetValue('num').ToString;
-              except
-                api_num2 := '';
-              end;
-              if (api_num = api_num2) and
-                (password = lognpass_get_password(phrase_md5, api_key, api_num))
-              then
-              begin
-                password_ok := true;
-                if (lognpass_previous_password.TryGetValue(phrase_md5,
-                  password_old)) then
-                begin
-                  password_ok := not(password = password_old);
+                try
+                  api_key := JSON.GetValue('key').ToString.Replace('"', '');
+                except
+                  api_key := '';
                 end;
-                lognpass_previous_password.AddOrSetValue(phrase_md5, password);
+                try
+                  api_num2 := JSON.GetValue('num').ToString;
+                except
+                  api_num2 := '';
+                end;
+                if (api_num = api_num2) and
+                  (password = lognpass_get_password(phrase_md5, api_key,
+                  api_num)) then
+                begin
+                  password_ok := true;
+                  if (lognpass_previous_password.TryGetValue(phrase_md5,
+                    password_old)) then
+                  begin
+                    password_ok := not(password = password_old);
+                  end;
+                  lognpass_previous_password.AddOrSetValue(phrase_md5,
+                    password);
+                end;
+              finally
+                JSON.Free;
+                if (password_ok) then
+                  succes_proc
+                else
+                  fail_proc;
               end;
             finally
-              JSON.Free;
-              if (password_ok) then
-                succes_proc
-              else
-                fail_proc;
+              SS.Free;
             end;
           end);
       except
@@ -156,7 +168,7 @@ end;
 
 initialization
 
-lognpass_previous_password := TDictionary<string, string>.Create;
+lognpass_previous_password := TDictionary<string, string>.create;
 
 finalization
 
