@@ -18,10 +18,6 @@ Follow my development streams of software, video games, mobile applications and 
 
 To download this code repository, we recommend using "git", but you can also download a ZIP file directly from [its GitHub repository](https://github.com/DeveloppeurPascal/LogNPass4Delphi).
 
-This project uses dependencies in the form of sub-modules. They will be absent from the ZIP file. You'll have to download them by hand.
-
-* [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) must be installed in the ./lib-externes/librairies subfolder.
-
 ## Documentation and support
 
 I use comments in [XMLDOC](https://docwiki.embarcadero.com/RADStudio/en/XML_Documentation_Comments) format in Delphi to document my projects. They are recognized by Help Insight, which offers real-time input help in the code editor.
